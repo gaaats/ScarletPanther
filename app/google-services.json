@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811122699932",
+    "project_id": "scarlet-panther",
+    "storage_bucket": "scarlet-panther.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811122699932:android:1eff903204499c99fa0759",
+        "android_client_info": {
+          "package_name": "com.superking.parchisi.stare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811122699932-3fp7s02ma1jh0ho0jtfvh4l27l3ms8pd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2O8puVqDhllO6sGqxe5W7rclB8qOtQDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811122699932-3fp7s02ma1jh0ho0jtfvh4l27l3ms8pd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

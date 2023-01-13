@@ -12,6 +12,10 @@
         tools:layout="@layout/fragment_gamq1" >
         <action
             android:id="@+id/action_gamq1Fragment_to_game2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
             app:destination="@id/game2Fragment" />
     </fragment>
     <fragment
@@ -27,6 +31,10 @@
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_game2Fragment_to_game3Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
             app:destination="@id/game3Fragment" />
     </fragment>
     <fragment

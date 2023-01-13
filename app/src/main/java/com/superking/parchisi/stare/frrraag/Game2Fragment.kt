@@ -114,7 +114,7 @@ class Game2Fragment : Fragment() {
     private fun gtmigjiojtjjgtjgtjjtgi(rrr: Int) {
         Toast.makeText(
             requireContext(),
-            "${names.random()} receive ${rrr} bonus",
+            "Receive ${rrr} bonus. Bonus type ${names.random()} ",
             Toast.LENGTH_SHORT
         ).show()
     }

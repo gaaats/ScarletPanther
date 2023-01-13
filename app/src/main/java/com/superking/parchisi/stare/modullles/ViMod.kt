@@ -8,10 +8,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.appsflyer.AFInAppEventParameterName
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.facebook.applinks.AppLinkData
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
+import com.google.firebase.analytics.FirebaseAnalytics
+import io.branch.referral.util.BRANCH_STANDARD_EVENT
+import io.branch.referral.util.BranchEvent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -92,45 +96,44 @@ class ViMod(
             _appsData.postValue(dataGotten)
 
             val bundle = Bundle()
-//            val instance = FirebaseAnalytics.getInstance(application.applicationContext)
+            val instance = FirebaseAnalytics.getInstance(application.applicationContext)
             var str = "opened_firstly"
-//            when (data?.get(AFInAppEventParameterName.AF_CHANNEL).toString()) {
-//                "ACI_Search" -> {
-//                    BranchEvent(BRANCH_STANDARD_EVENT.ACHIEVE_LEVEL).setDescription("ACI_Search").logEvent(application.applicationContext)
-//                    str = "first_open_s"
-//                    instance.logEvent(str, bundle)
-////                    Event.buildWithEventName("ACI_Search").send()
-//
+            when (data?.get(AFInAppEventParameterName.AF_CHANNEL).toString()) {
+                "ACI_Search" -> {
+                    BranchEvent(BRANCH_STANDARD_EVENT.ACHIEVE_LEVEL).setDescription("ACI_Search").logEvent(application.applicationContext)
+                    str = "first_open_s"
+                    instance.logEvent(str, bundle)
+//                    Event.buildWithEventName("ACI_Search").send()
+
 //                    Event.buildWithEventType(EventType.ACHIEVEMENT)
 //                        .setName("ACI_Search").send()
-//                }
-//                "ACI_Youtube" -> {
-//                    BranchEvent(BRANCH_STANDARD_EVENT.SHARE).setDescription("ACI_Youtube").logEvent(application.applicationContext)
-//                    str = "first_open_y"
-//                    instance.logEvent(str, bundle)
-//
+                }
+                "ACI_Youtube" -> {
+                    BranchEvent(BRANCH_STANDARD_EVENT.SHARE).setDescription("ACI_Youtube").logEvent(application.applicationContext)
+                    str = "first_open_y"
+                    instance.logEvent(str, bundle)
+
 //                    Event.buildWithEventType(EventType.SEARCH)
 //                        .setName("ACI_Youtube").send()
-//                }
-//                "ACI_Display" -> {
-//                    BranchEvent(BRANCH_STANDARD_EVENT.RATE).setDescription("ACI_Display").logEvent(application.applicationContext)
-//                    str = "first_open_d"
-//                    instance.logEvent(str, bundle)
+                }
+                "ACI_Display" -> {
+                    BranchEvent(BRANCH_STANDARD_EVENT.RATE).setDescription("ACI_Display").logEvent(application.applicationContext)
+                    str = "first_open_d"
+                    instance.logEvent(str, bundle)
 //                    Event.buildWithEventType(EventType.RATING)
 //                        .setName("ACI_Display").send()
-//                }
-//
-//                else ->{
+                }
+
+                else ->{
 //                    Event.buildWithEventType(EventType.AD_VIEW)
 //                        .setName("NoChannel").send()
-//
-//                    BranchEvent(BRANCH_STANDARD_EVENT.VIEW_AD).setDescription("NoChannel").logEvent(application.applicationContext)
-//                    Log.d("Branch Check", "I'm here, branch bitch! No source though")
-//                }
-//
-//            }
 
-//            instance.logEvent(str, bundle)
+                    BranchEvent(BRANCH_STANDARD_EVENT.VIEW_AD).setDescription("NoChannel").logEvent(application.applicationContext)
+                }
+
+            }
+
+            instance.logEvent(str, bundle)
         }
 
         override fun onConversionDataFail(error: String?) {

@@ -6,6 +6,7 @@ import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
 import com.superking.parchisi.stare.modullles.appModule
 import com.superking.parchisi.stare.modullles.viewModelModule
+import io.branch.referral.Branch
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext
@@ -36,10 +37,10 @@ class MaiinnClaaaaasss:Application() {
         OneSignal.initWithContext(this)
         OneSignal.setAppId(ONESIGNAL_APP_ID)
 
-//        Branch.enableTestMode()
+        Branch.enableTestMode()
 
         // Branch object initialization
-//        Branch.getAutoInstance(this)
+        Branch.getAutoInstance(this)
 
         //Kochava init
 //        Tracker.getInstance().startWithAppGuid(applicationContext, "kojoy-of-iridescence-w9gx2r")

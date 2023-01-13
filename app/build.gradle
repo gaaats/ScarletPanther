@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
     id 'androidx.navigation.safeargs'
-//    id 'com.google.gms.google-services'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -91,11 +91,11 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
 
     //branch
-//    implementation 'io.branch.sdk.android:library:5.+'
+    implementation 'io.branch.sdk.android:library:5.+'
     //firebase
-//    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
 
-//    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-analytics'
 
     //facebook
     implementation 'com.facebook.android:facebook-android-sdk:latest.release'

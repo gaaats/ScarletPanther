@@ -15,8 +15,6 @@
         app:layout_constraintGuide_percent="0.30" />
 
 
-
-
     <ImageView
         android:id="@+id/img_el1"
         android:layout_width="150dp"
@@ -40,13 +38,12 @@
         android:id="@+id/gtgttgtgtgtgt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#F45568"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat_black"
         android:padding="4dp"
         android:text="@string/app_name"
         android:textAllCaps="true"
-        android:textColor="#120125"
+        android:textColor="#F8C1C3"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@id/igtjgtjiojtgjtgj"
         app:layout_constraintStart_toStartOf="@id/gjtjiotgjgtjtgji"
@@ -69,7 +66,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat_black"
         android:padding="4dp"
-        android:text="Team 1"
+        android:text="honca"
         android:textAllCaps="true"
         android:textColor="#120125"
         android:textSize="20sp"
@@ -83,13 +80,13 @@
         android:id="@+id/tv_team_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#F45568"
+        android:background="#776B6C"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/montserrat_black"
         android:padding="4dp"
-        android:text="Team 2"
+        android:text="corlo"
         android:textAllCaps="true"
-        android:textColor="#01250B"
+        android:textColor="#250101"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@id/img_el2"
         app:layout_constraintStart_toStartOf="@id/img_el2"
@@ -137,7 +134,7 @@
         android:id="@+id/img_mechanicerfgt"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@drawable/logg"
+        android:src="@drawable/robot"
         app:layout_constraintBottom_toBottomOf="@id/jgtjtgjjtgjtgj"
         app:layout_constraintStart_toStartOf="@id/gjtjiotgjgtjtgji" />
 
