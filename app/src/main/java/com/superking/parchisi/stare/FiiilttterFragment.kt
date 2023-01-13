@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.appsflyer.AppsFlyerLib
 import com.my.tracker.MyTracker
@@ -85,6 +86,12 @@ class FiiilttterFragment : Fragment() {
                     startActivity(intentBeam)
                     activity?.finish()
                 } else if (deepSt!=null||countryDev!!.contains(count.toString())) {
+
+                    Toast.makeText(requireContext(), "deep ${deepSt}", Toast.LENGTH_SHORT).show()
+
+                    Log.d("lolo", "deeep is ${deepSt}")
+                    Log.d("lolo", "list geo ${countryDev}")
+                    Log.d("lolo", "user geo ${count}")
                     shareP.edit().putString("link", linkFB).apply()
                     shareP.edit().putString("WebInt", "deepLink").apply()
                     startActivity(intentBeam)

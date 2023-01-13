@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.superking.parchisi.stare.modullles.ViMod
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
@@ -47,7 +49,12 @@ class BeeeeforFiiilFragment : Fragment() {
         if (checkFly=="1" &&appsCamp == null) {
             viewMainModel.convers(mContext)
             viewMainModel.appsData.observe(viewLifecycleOwner) {
+
                 if (it != null) {
+                    //delete later
+                    Toast.makeText(requireContext(), "naming ${it}", Toast.LENGTH_SHORT).show()
+
+
                     appCamp = it.toString()
                     shareP.edit().putString("appCamp", appCamp).apply()
                     findNavController().navigate(R.id.action_beeeeforFiiilFragment_to_fiiilttterFragment)
