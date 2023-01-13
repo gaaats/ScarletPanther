@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bbback"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frrraag.Game2Fragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/jtgjtgijgtjjtg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+
+
+
+    <ImageView
+        android:id="@+id/img_el1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logg"
+        app:layout_constraintBottom_toBottomOf="@id/gjtijgtjgtjijtg"
+        app:layout_constraintEnd_toStartOf="@id/img_el2"
+        app:layout_constraintStart_toStartOf="@id/gjtjiotgjgtjtgji" />
+
+
+    <ImageView
+        android:id="@+id/img_el2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ggggg"
+        app:layout_constraintBottom_toBottomOf="@id/gjtijgtjgtjijtg"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toEndOf="@id/img_el1" />
+
+    <TextView
+        android:id="@+id/gtgttgtgtgtgt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F45568"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_black"
+        android:padding="4dp"
+        android:text="@string/app_name"
+        android:textAllCaps="true"
+        android:textColor="#120125"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/igtjgtjiojtgjtgj"
+        app:layout_constraintStart_toStartOf="@id/gjtjiotgjgtjtgji"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintTop_toTopOf="@id/jgtjtgjjtgjtgj"
+        android:gravity="center"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_05gt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <TextView
+        android:id="@+id/tv_team_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F4898C"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_black"
+        android:padding="4dp"
+        android:text="Team 1"
+        android:textAllCaps="true"
+        android:textColor="#120125"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/img_el1"
+        app:layout_constraintStart_toStartOf="@id/img_el1"
+        app:layout_constraintTop_toBottomOf="@id/img_el1" />
+
+
+
+    <TextView
+        android:id="@+id/tv_team_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F45568"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_black"
+        android:padding="4dp"
+        android:text="Team 2"
+        android:textAllCaps="true"
+        android:textColor="#01250B"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/img_el2"
+        app:layout_constraintStart_toStartOf="@id/img_el2"
+        app:layout_constraintTop_toBottomOf="@id/img_el2" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/giojjtgjgtjtgijtg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/igtjgtjiojtgjtgj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/jgtjtgjjtgjtgj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gjtijgtjgtjijtg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vert_95gtgtt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+
+    <ImageView
+        android:id="@+id/img_mechanicerfgt"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/logg"
+        app:layout_constraintBottom_toBottomOf="@id/jgtjtgjjtgjtgj"
+        app:layout_constraintStart_toStartOf="@id/gjtjiotgjgtjtgji" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gjtjiotgjgtjtgji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gijtgtijgt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <TextView
+        android:id="@+id/juujjuujuj"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:background="#F45568"
+        android:fontFamily="@font/montserrat_black"
+        android:padding="2dp"
+        android:text=": Choose one element and receive bonus"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_mechanicerfgt"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vert_95gtgtt"
+        app:layout_constraintStart_toEndOf="@id/img_mechanicerfgt"
+        app:layout_constraintTop_toTopOf="@id/img_mechanicerfgt" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

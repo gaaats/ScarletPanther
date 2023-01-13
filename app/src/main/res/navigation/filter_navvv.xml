@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filter_navvv"
+    app:startDestination="@id/mainnnnnnFragment">
+
+    <fragment
+        android:id="@+id/mainnnnnnFragment"
+        android:name="com.superking.parchisi.stare.MainnnnnnFragment"
+        android:label="fragment_mainnnnnn"
+        tools:layout="@layout/fragment_mainnnnnn" >
+        <action
+            android:id="@+id/action_mainnnnnnFragment_to_couuuntryFragment"
+            app:destination="@id/couuuntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/couuuntryFragment"
+        android:name="com.superking.parchisi.stare.CouuuntryFragment"
+        android:label="fragment_couuuntry"
+        tools:layout="@layout/fragment_couuuntry" >
+        <action
+            android:id="@+id/action_couuuntryFragment_to_seeecMainFragment"
+            app:destination="@id/seeecMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeecMainFragment"
+        android:name="com.superking.parchisi.stare.SeeecMainFragment"
+        android:label="fragment_seeec_main"
+        tools:layout="@layout/fragment_seeec_main" >
+        <action
+            android:id="@+id/action_seeecMainFragment_to_beeeeforFiiilFragment"
+            app:destination="@id/beeeeforFiiilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beeeeforFiiilFragment"
+        android:name="com.superking.parchisi.stare.BeeeeforFiiilFragment"
+        android:label="fragment_beeeefor_fiiil"
+        tools:layout="@layout/fragment_beeeefor_fiiil" >
+        <action
+            android:id="@+id/action_beeeeforFiiilFragment_to_fiiilttterFragment"
+            app:destination="@id/fiiilttterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fiiilttterFragment"
+        android:name="com.superking.parchisi.stare.FiiilttterFragment"
+        android:label="fragment_fiiilttter"
+        tools:layout="@layout/fragment_fiiilttter" />
+</navigation>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">High Flyer XL</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">1082547015747564</string>
+    <string name="facebook_client_token">467d920b35ca8d736be61641f247668c</string>
+</resources>
