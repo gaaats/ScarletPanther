@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_mainnnnnn" >
         <action
             android:id="@+id/action_mainnnnnnFragment_to_couuuntryFragment"
-            app:destination="@id/couuuntryFragment" />
+            app:destination="@id/couuuntryFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/couuuntryFragment"
@@ -21,6 +25,10 @@
         tools:layout="@layout/fragment_couuuntry" >
         <action
             android:id="@+id/action_couuuntryFragment_to_seeecMainFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
             app:destination="@id/seeecMainFragment" />
     </fragment>
     <fragment
@@ -30,6 +38,10 @@
         tools:layout="@layout/fragment_seeec_main" >
         <action
             android:id="@+id/action_seeecMainFragment_to_beeeeforFiiilFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
             app:destination="@id/beeeeforFiiilFragment" />
     </fragment>
     <fragment
@@ -39,6 +51,10 @@
         tools:layout="@layout/fragment_beeeefor_fiiil" >
         <action
             android:id="@+id/action_beeeeforFiiilFragment_to_fiiilttterFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"
             app:destination="@id/fiiilttterFragment" />
     </fragment>
     <fragment
