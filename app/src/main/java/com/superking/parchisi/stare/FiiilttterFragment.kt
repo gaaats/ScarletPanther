@@ -81,6 +81,7 @@ class FiiilttterFragment : Fragment() {
         when(apps) {
             "1" ->
                 if(appCamp!!.contains("tdb2")) {
+                    Log.d("lolo", "naming is ${appCamp}")
                     shareP.edit().putString("link", linkApps).apply()
                     shareP.edit().putString("WebInt", "campaign").apply()
                     startActivity(intentBeam)
@@ -88,7 +89,7 @@ class FiiilttterFragment : Fragment() {
                 } else if (deepSt!=null||countryDev!!.contains(count.toString())) {
 
                     Toast.makeText(requireContext(), "deep ${deepSt}", Toast.LENGTH_SHORT).show()
-
+                    Log.d("lolo", "naming is ${appCamp}")
                     Log.d("lolo", "deeep is ${deepSt}")
                     Log.d("lolo", "list geo ${countryDev}")
                     Log.d("lolo", "user geo ${count}")

@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -98,8 +99,12 @@ class ViMod(
             val bundle = Bundle()
             val instance = FirebaseAnalytics.getInstance(application.applicationContext)
             var str = "opened_firstly"
+
+            Log.d("lolo", "AFInAppEventParameterName ${data?.get(AFInAppEventParameterName.AF_CHANNEL).toString()}")
+
             when (data?.get(AFInAppEventParameterName.AF_CHANNEL).toString()) {
                 "ACI_Search" -> {
+                    Log.d("lolo", "ACI_Search")
                     BranchEvent(BRANCH_STANDARD_EVENT.ACHIEVE_LEVEL).setDescription("ACI_Search").logEvent(application.applicationContext)
                     str = "first_open_s"
                     instance.logEvent(str, bundle)
@@ -109,6 +114,7 @@ class ViMod(
 //                        .setName("ACI_Search").send()
                 }
                 "ACI_Youtube" -> {
+                    Log.d("lolo", "ACI_Youtube")
                     BranchEvent(BRANCH_STANDARD_EVENT.SHARE).setDescription("ACI_Youtube").logEvent(application.applicationContext)
                     str = "first_open_y"
                     instance.logEvent(str, bundle)
@@ -117,6 +123,7 @@ class ViMod(
 //                        .setName("ACI_Youtube").send()
                 }
                 "ACI_Display" -> {
+                    Log.d("lolo", "ACI_Display")
                     BranchEvent(BRANCH_STANDARD_EVENT.RATE).setDescription("ACI_Display").logEvent(application.applicationContext)
                     str = "first_open_d"
                     instance.logEvent(str, bundle)
@@ -125,6 +132,7 @@ class ViMod(
                 }
 
                 else ->{
+                    Log.d("lolo", "ACI_else")
 //                    Event.buildWithEventType(EventType.AD_VIEW)
 //                        .setName("NoChannel").send()
 
