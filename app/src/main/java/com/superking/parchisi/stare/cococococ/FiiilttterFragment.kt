@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.appsflyer.AppsFlyerLib
 import com.my.tracker.MyTracker
@@ -91,7 +90,7 @@ class FiiilttterFragment : Fragment() {
                     activity?.finish()
                 } else if (deepStgttgtgt!=null||countryDevgtgtgtgt!!.contains(counthhyyhhyhy.toString())) {
 
-                    Toast.makeText(requireContext(), "deep ${deepStgttgtgt}", Toast.LENGTH_SHORT).show()
+
                     ggtgokkgttgk.edit().putString("link", linkFBfrrfrf).apply()
                     ggtgokkgttgk.edit().putString("WebInt", "deepLink").apply()
                     startActivity(ffrfrfrfrrf)
