@@ -12,7 +12,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-val appModule = module {
+val appModulefrrffrrf = module {
 
     single  <HostInterface> (named("HostInter")){
         get<Retrofit>(named("RetroDev"))
@@ -44,21 +44,21 @@ val appModule = module {
         DevRepo(get(named("HostInter")))
     }
     single{
-        provideGson()
+        provideGsonfrrfrffrrfrfrfrf()
     }
     single (named("SharedPreferences")) {
-        provideSharedPref(androidApplication())
+        provideSharedPreffrfrrgtggtgttgt(androidApplication())
     }
 }
 
-fun provideSharedPref(app: Application): SharedPreferences {
+fun provideSharedPreffrfrrgtggtgttgt(app: Application): SharedPreferences {
     return app.applicationContext.getSharedPreferences(
         "SHARED_PREF",
         Context.MODE_PRIVATE
     )
 }
 
-fun provideGson(): Gson {
+fun provideGsonfrrfrffrrfrfrfrf(): Gson {
     return GsonBuilder().create()
 }
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/grraaddda"
     android:layout_height="match_parent"
-    tools:context=".BeeeeforFiiilFragment">
+    tools:context=".cococococ.BeeeeforFiiilFragment">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lotAnimaaaa"

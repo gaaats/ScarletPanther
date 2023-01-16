@@ -1,4 +1,4 @@
-package com.superking.parchisi.stare.frrraag
+package com.superking.parchisi.stare.gjgtjitgjgt
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -21,7 +21,7 @@ class Game2Fragment : Fragment() {
         }
     }
 
-    private val names = listOf(
+    private val gtiojjitgiojgtigtj = listOf(
         "Sasha",
         "Grom",
         "Tor",
@@ -114,7 +114,7 @@ class Game2Fragment : Fragment() {
     private fun gtmigjiojtjjgtjgtjjtgi(rrr: Int) {
         Toast.makeText(
             requireContext(),
-            "Receive ${rrr} bonus. Bonus type ${names.random()} ",
+            "Receive ${rrr} bonus. Bonus type ${gtiojjitgiojgtigtj.random()} ",
             Toast.LENGTH_SHORT
         ).show()
     }
@@ -124,6 +124,14 @@ class Game2Fragment : Fragment() {
     }
 
     private fun kgitjiojgtojgtijgtjiogtj() {
+        gtgtjgtjogtjoijjgt()
+    }
+
+    private fun gtgtjgtjogtjoijjgt() {
+        gttjgijgttgijgtjitgji()
+    }
+
+    private fun gttjgijgttgijgtjitgji() {
         findNavController().navigate(R.id.action_game2Fragment_to_game3Fragment)
     }
 
@@ -133,12 +141,16 @@ class Game2Fragment : Fragment() {
     }
 
     private fun efrfrgtgttg5() {
+        okopgtgtojgtijtgijtgjgtitg()
+        hkyhykhkykhy()
+    }
+
+    private fun okopgtgtojgtijtgijtgjgtitg() {
         Toast.makeText(
             requireContext(),
             "Error 999...",
             Toast.LENGTH_SHORT
         ).show()
-        hkyhykhkykhy()
     }
 
     private fun hkyhykhkykhy() {

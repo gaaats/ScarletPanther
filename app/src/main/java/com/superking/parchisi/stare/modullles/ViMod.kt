@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,111 +27,108 @@ class ViMod(
     val application: Application
 ) : ViewModel() {
 
-    init {
-        viewModelScope.launch(Dispatchers.IO) {
-            getAdvertisingIdClient()
-        }
-        viewModelScope.launch(Dispatchers.Main) {
-            getData()
-        }
-    }
+
+    private val gtgtggt = MutableLiveData<GeoDev>()
+    val ggtgtgtgtthyhy: LiveData<GeoDev>
+        get() = gtgtggt
 
 
-    private val _data = MutableLiveData<CountryCodeJS>()
-    val data: LiveData<CountryCodeJS>
-        get() = _data
+    private val _appsDataaaaaaa56d56 = MutableLiveData<String>()
+    val appsDatagtgt65tggt: LiveData<String>
+        get() = _appsDataaaaaaa56d56
 
-
-    private val _countryCode = MutableLiveData<CountryCodeJS>()
-    val countryCode: LiveData<CountryCodeJS>
-        get() = _countryCode
-
-    private val _geo = MutableLiveData<GeoDev>()
-    val geo: LiveData<GeoDev>
-        get() = _geo
-
-
-    private val _appsData = MutableLiveData<String>()
-    val appsData: LiveData<String>
-        get() = _appsData
-
-    private val _deepS = MutableLiveData<String>()
+    private val _deepSfrrf56fr5fr5 = MutableLiveData<String>()
     val deepS: LiveData<String>
-        get() = _deepS
+        get() = _deepSfrrf56fr5fr5
 
-
-    private val _mainId = MutableLiveData<String?>()
-    val mainId: LiveData<String?>
-        get() = _mainId
-
-    suspend fun getData() {
-        _countryCode.postValue(mainRepository.getDat().body())
-        getDevData()
+    suspend fun getDataaaaaaaa() {
+        fr5rf5rf5.postValue(mainRepository.getDattttttttt().body())
+        getDevDataaaaaaaaaa()
     }
 
-    suspend fun getDevData() {
-        _geo.postValue(devRepo.getDataDev().body())
+    suspend fun getDevDataaaaaaaaaa() {
+        gtgtggt.postValue(devRepo.getDataDevvvvvvvv().body())
     }
 
-    fun convers(cont: Context) {
+
+
+    private val gttggt5gt5tg = MutableLiveData<CountryCodeJS>()
+    val data: LiveData<CountryCodeJS>
+        get() = gttggt5gt5tg
+
+
+    private val fr5rf5rf5 = MutableLiveData<CountryCodeJS>()
+    val countryCodefrfrrfrffr6: LiveData<CountryCodeJS>
+        get() = fr5rf5rf5
+
+
+    private val _mainIddededdeeded = MutableLiveData<String?>()
+    val frrfrffrfrrf: LiveData<String?>
+        get() = _mainIddededdeeded
+
+
+    fun converssssssss(cont: Context) {
         AppsFlyerLib.getInstance()
-            .init("GNQRSAy2kEDzbcasnQ5jEF", conversionDataListener, application)
+            .init("GNQRSAy2kEDzbcasnQ5jEF", gtjtgigtjgtjgtjijgtijgtjig, application)
         AppsFlyerLib.getInstance().start(cont)
     }
 
-    fun fbDeee(cont: Context) {
+
+    fun gtjjgtgtjjgtijgtjigt() {
+        val vbghgthgthhgt = AdvertisingIdClient(application)
+        vbghgthgthhgt.start()
+        val gjjgtijigtjjgtjgt = vbghgthgthhgt.info.id.toString()
+        _mainIddededdeeded.postValue(gjjgtijigtjjgtjgt)
+    }
+
+    fun fbDeeeeeeeee(cont: Context) {
         AppLinkData.fetchDeferredAppLinkData(
             cont
         ) { data: AppLinkData? ->
             data?.let {
-                val deepData = data.targetUri?.host.toString()
-                shP.edit().putString("deepSt", deepData).apply()
+                val deepDataaaaaaaaa = data.targetUri?.host.toString()
+                shP.edit().putString("deepSt", deepDataaaaaaaaa).apply()
             }
         }
     }
 
-    private val conversionDataListener = object : AppsFlyerConversionListener {
+    private val gtjtgigtjgtjgtjijgtijgtjig = object : AppsFlyerConversionListener {
         override fun onConversionDataSuccess(data: MutableMap<String, Any>?) {
-            val dataGotten = data?.get("campaign").toString()
-            _appsData.postValue(dataGotten)
+            val ggtgtgtgtgt = data?.get("campaign").toString()
+            _appsDataaaaaaa56d56.postValue(ggtgtgtgtgt)
 
-            val bundle = Bundle()
-            val instance = FirebaseAnalytics.getInstance(application.applicationContext)
-            var str = "opened_firstly"
+            val hyhjuujjujuju = Bundle()
+            val instanceeeeeeee = FirebaseAnalytics.getInstance(application.applicationContext)
+            var strtrrrrrrrr = "opened_firstly"
 
-            Log.d("lolo", "AFInAppEventParameterName ${data?.get(AFInAppEventParameterName.AF_CHANNEL).toString()}")
 
             when (data?.get(AFInAppEventParameterName.AF_CHANNEL).toString()) {
                 "ACI_Search" -> {
-                    Log.d("lolo", "ACI_Search")
                     BranchEvent(BRANCH_STANDARD_EVENT.ACHIEVE_LEVEL).setDescription("ACI_Search").logEvent(application.applicationContext)
-                    str = "first_open_s"
-                    instance.logEvent(str, bundle)
+                    strtrrrrrrrr = "first_open_s"
+                    instanceeeeeeee.logEvent(strtrrrrrrrr, hyhjuujjujuju)
 //                    Event.buildWithEventName("ACI_Search").send()
 
 //                    Event.buildWithEventType(EventType.ACHIEVEMENT)
 //                        .setName("ACI_Search").send()
                 }
                 "ACI_Youtube" -> {
-                    Log.d("lolo", "ACI_Youtube")
                     BranchEvent(BRANCH_STANDARD_EVENT.SHARE).setDescription("ACI_Youtube").logEvent(application.applicationContext)
-                    str = "first_open_y"
-                    instance.logEvent(str, bundle)
+                    strtrrrrrrrr = "first_open_y"
+                    instanceeeeeeee.logEvent(strtrrrrrrrr, hyhjuujjujuju)
 
 //                    Event.buildWithEventType(EventType.SEARCH)
 //                        .setName("ACI_Youtube").send()
                 }
                 "ACI_Display" -> {
-                    Log.d("lolo", "ACI_Display")
                     BranchEvent(BRANCH_STANDARD_EVENT.RATE).setDescription("ACI_Display").logEvent(application.applicationContext)
-                    str = "first_open_d"
-                    instance.logEvent(str, bundle)
+                    strtrrrrrrrr = "first_open_d"
+                    instanceeeeeeee.logEvent(strtrrrrrrrr, hyhjuujjujuju)
 //                    Event.buildWithEventType(EventType.RATING)
 //                        .setName("ACI_Display").send()
                 }
 
                 else ->{
-                    Log.d("lolo", "ACI_else")
 //                    Event.buildWithEventType(EventType.AD_VIEW)
 //                        .setName("NoChannel").send()
 
@@ -141,7 +137,7 @@ class ViMod(
 
             }
 
-            instance.logEvent(str, bundle)
+            instanceeeeeeee.logEvent(strtrrrrrrrr, hyhjuujjujuju)
         }
 
         override fun onConversionDataFail(error: String?) {
@@ -156,11 +152,14 @@ class ViMod(
     }
 
 
-    fun getAdvertisingIdClient() {
-        val advertisingIdClient = AdvertisingIdClient(application)
-        advertisingIdClient.start()
-        val idUserAdvertising = advertisingIdClient.info.id.toString()
-        _mainId.postValue(idUserAdvertising)
+
+    init {
+        viewModelScope.launch(Dispatchers.IO) {
+            gtjjgtgtjjgtijgtjigt()
+        }
+        viewModelScope.launch(Dispatchers.Main) {
+            getDataaaaaaaa()
+        }
     }
 
 }

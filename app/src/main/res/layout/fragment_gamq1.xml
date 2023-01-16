@@ -5,7 +5,7 @@
     android:background="@drawable/bbback"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".frrraag.Gamq1Fragment">
+    tools:context=".oootththht.Gamq1Fragment">
 
 
 
@@ -41,8 +41,7 @@
         android:layout_width="220dp"
         android:layout_height="220dp"
         android:scaleType="centerInside"
-        android:src="@drawable/logg"
-        android:rotation="270"
+        android:src="@drawable/plaaane"
         app:layout_constraintBottom_toBottomOf="@id/gtjitgjgtjjgtjgtj"
         app:layout_constraintTop_toBottomOf="@id/btn_play_game"
         app:layout_constraintEnd_toEndOf="@id/gojgtjtgjitgjijtgi"

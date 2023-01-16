@@ -1,4 +1,4 @@
-package com.superking.parchisi.stare.frrraag
+package com.superking.parchisi.stare.oootththht
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,7 +1,8 @@
-package com.superking.parchisi.stare
+package com.superking.parchisi.stare.cococococ
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.superking.parchisi.stare.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

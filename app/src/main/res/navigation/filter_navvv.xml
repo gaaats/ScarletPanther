@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainnnnnnFragment"
-        android:name="com.superking.parchisi.stare.MainnnnnnFragment"
+        android:name="com.superking.parchisi.stare.cococococ.MainnnnnnFragment"
         android:label="fragment_mainnnnnn"
         tools:layout="@layout/fragment_mainnnnnn" >
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/couuuntryFragment"
-        android:name="com.superking.parchisi.stare.CouuuntryFragment"
+        android:name="com.superking.parchisi.stare.cococococ.CouuuntryFragment"
         android:label="fragment_couuuntry"
         tools:layout="@layout/fragment_couuuntry" >
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/seeecMainFragment"
-        android:name="com.superking.parchisi.stare.SeeecMainFragment"
+        android:name="com.superking.parchisi.stare.cococococ.SeeecMainFragment"
         android:label="fragment_seeec_main"
         tools:layout="@layout/fragment_seeec_main" >
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/beeeeforFiiilFragment"
-        android:name="com.superking.parchisi.stare.BeeeeforFiiilFragment"
+        android:name="com.superking.parchisi.stare.cococococ.BeeeeforFiiilFragment"
         android:label="fragment_beeeefor_fiiil"
         tools:layout="@layout/fragment_beeeefor_fiiil" >
         <action
@@ -59,7 +59,7 @@
     </fragment>
     <fragment
         android:id="@+id/fiiilttterFragment"
-        android:name="com.superking.parchisi.stare.FiiilttterFragment"
+        android:name="com.superking.parchisi.stare.cococococ.FiiilttterFragment"
         android:label="fragment_fiiilttter"
         tools:layout="@layout/fragment_fiiilttter" />
 </navigation>

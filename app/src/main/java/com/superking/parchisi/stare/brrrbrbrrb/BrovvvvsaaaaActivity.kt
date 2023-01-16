@@ -1,5 +1,11 @@
 package com.superking.parchisi.stare.brrrbrbrrb
 
+
+import android.provider.MediaStore
+import android.util.Log
+import android.webkit.*
+import android.widget.Toast
+import com.superking.parchisi.stare.databinding.ActivityBrovvvvsaaaaBinding
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -8,14 +14,8 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
 import android.os.Looper
-import android.provider.MediaStore
-import android.util.Log
-import android.webkit.*
-import android.widget.Toast
-import com.superking.parchisi.stare.R
-import com.superking.parchisi.stare.databinding.ActivityBrovvvvsaaaaBinding
 import com.superking.parchisi.stare.maaaaainaanclaa.MaiinnClaaaaasss
-import com.superking.parchisi.stare.maaaaainaanclaa.MaiinnClaaaaasss.Companion.aps_id
+import com.superking.parchisi.stare.maaaaainaanclaa.MaiinnClaaaaasss.Companion.aps_idddddd
 import com.superking.parchisi.stare.modullles.BeamModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.qualifier.named
@@ -25,39 +25,29 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class BrovvvvsaaaaActivity : AppCompatActivity() {
-    private lateinit var bindBeam: ActivityBrovvvvsaaaaBinding
-    lateinit var beam: WebView
 
-
-    private var mFilePathCallback: ValueCallback<Array<Uri>>? = null
-    private var mCameraPhotoPath: String? = null
-    private val INPUT_FILE_REQUEST_CODE = 1
-
-    private val viewBeamModel by viewModel<BeamModel>(
-        named("BeamModel")
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindBeam = ActivityBrovvvvsaaaaBinding.inflate(layoutInflater)
-        setContentView(bindBeam.root)
-        beam = bindBeam.webst
+        activityBrovvvvsaaaaBinding = ActivityBrovvvvsaaaaBinding.inflate(layoutInflater)
+        setContentView(activityBrovvvvsaaaaBinding.root)
+        webViewfrrfrfrf = activityBrovvvvsaaaaBinding.webst
         CookieManager.getInstance().setAcceptCookie(true)
-        CookieManager.getInstance().setAcceptThirdPartyCookies(beam, true)
-        viewBeamModel.webSet(beam)
+        CookieManager.getInstance().setAcceptThirdPartyCookies(webViewfrrfrfrf, true)
+        frokrfko.webSetfrrffrrfrfrf(webViewfrrfrfrf)
 
 
-        beam.webViewClient = object : WebViewClient() {
+        webViewfrrfrfrf.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String): Boolean {
                 try {
                     if (URLUtil.isNetworkUrl(url)) {
                         return false
                     }
-                    if (viewBeamModel.appInstalledOrNot(url)) {
+                    if (frokrfko.hyhyjyjhijyhihyjhy(url)) {
 
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data = Uri.parse(url)
-                        startActivity(intent)
+                        val gtkgtkkgtkogt = Intent(Intent.ACTION_VIEW)
+                        gtkgtkkgtkogt.data = Uri.parse(url)
+                        startActivity(gtkgtkkgtkogt)
                     } else {
 
                         Toast.makeText(
@@ -80,7 +70,7 @@ class BrovvvvsaaaaActivity : AppCompatActivity() {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                saveUrl(url)
+                saveUrlaaaa(url)
             }
 
 
@@ -94,13 +84,25 @@ class BrovvvvsaaaaActivity : AppCompatActivity() {
             }
         }
 
-        beam.webChromeClient = ChromeClient()
-        beam.loadUrl(urururururururur())
+        webViewfrrfrfrf.webChromeClient = ChromeClient()
+        webViewfrrfrfrf.loadUrl(nvfbfdedfedfsddrsdrsdds())
     }
+
+    private lateinit var activityBrovvvvsaaaaBinding: ActivityBrovvvvsaaaaBinding
+    lateinit var webViewfrrfrfrf: WebView
+
+
+    private var arrayValueCallback: ValueCallback<Array<Uri>>? = null
+    private var ggtgtgtgtgttg: String? = null
+    private val gtjiogtjoiggtjjgt = 1
+
+    private val frokrfko by viewModel<BeamModel>(
+        named("BeamModel")
+    )
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
 
-        if (requestCode != INPUT_FILE_REQUEST_CODE || mFilePathCallback == null) {
+        if (requestCode != gtjiogtjoiggtjjgt || arrayValueCallback == null) {
             super.onActivityResult(requestCode, resultCode, data)
             return
         }
@@ -108,18 +110,18 @@ class BrovvvvsaaaaActivity : AppCompatActivity() {
 
         if (resultCode == RESULT_OK) {
             if (data == null) {
-                if (mCameraPhotoPath != null) {
-                    results = arrayOf(Uri.parse(mCameraPhotoPath))
+                if (ggtgtgtgtgttg != null) {
+                    results = arrayOf(Uri.parse(ggtgtgtgtgttg))
                 }
             } else {
-                val dataString = data.dataString
-                if (dataString != null) {
-                    results = arrayOf(Uri.parse(dataString))
+                val ggtgtgttggt = data.dataString
+                if (ggtgtgttggt != null) {
+                    results = arrayOf(Uri.parse(ggtgtgttggt))
                 }
             }
         }
-        mFilePathCallback!!.onReceiveValue(results)
-        mFilePathCallback = null
+        arrayValueCallback!!.onReceiveValue(results)
+        arrayValueCallback = null
         return
     }
 
@@ -131,93 +133,93 @@ class BrovvvvsaaaaActivity : AppCompatActivity() {
             filePath: ValueCallback<Array<Uri>>?,
             fileChooserParams: FileChooserParams?
         ): Boolean {
-            mFilePathCallback?.onReceiveValue(null)
-            mFilePathCallback = filePath
-            var takePictureIntent: Intent? = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            if (takePictureIntent!!.resolveActivity(packageManager) != null) {
-                var photoFile: File? = null
+            arrayValueCallback?.onReceiveValue(null)
+            arrayValueCallback = filePath
+            var gttggtgtfff5: Intent? = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            if (gttggtgtfff5!!.resolveActivity(packageManager) != null) {
+                var g5t5gg5t5gt: File? = null
                 try {
-                    photoFile = createImageFile()
-                    takePictureIntent.putExtra("PhotoPath", mCameraPhotoPath)
+                    g5t5gg5t5gt = gtjigthtghugtgthugt()
+                    gttggtgtfff5.putExtra("PhotoPath", ggtgtgtgtgttg)
                 } catch (ex: IOException) {
                     Log.e("ErrorOccurred", "Unable to create Image File", ex)
                 }
 
-                if (photoFile != null) {
-                    mCameraPhotoPath = "file:" + photoFile.absolutePath
-                    takePictureIntent.putExtra(
+                if (g5t5gg5t5gt != null) {
+                    ggtgtgtgtgttg = "file:" + g5t5gg5t5gt.absolutePath
+                    gttggtgtfff5.putExtra(
                         MediaStore.EXTRA_OUTPUT,
-                        Uri.fromFile(photoFile)
+                        Uri.fromFile(g5t5gg5t5gt)
                     )
                 } else {
-                    takePictureIntent = null
+                    gttggtgtfff5 = null
                 }
             }
-            val contentSelectionIntent = Intent(Intent.ACTION_GET_CONTENT)
-            contentSelectionIntent.addCategory(Intent.CATEGORY_OPENABLE)
-            contentSelectionIntent.type = "image/*"
-            val intentArray: Array<Intent?> =
-                takePictureIntent?.let { arrayOf(it) } ?: arrayOfNulls(0)
-            val chooserIntent = Intent(Intent.ACTION_CHOOSER)
-            chooserIntent.putExtra(Intent.EXTRA_INTENT, contentSelectionIntent)
-            chooserIntent.putExtra(Intent.EXTRA_TITLE, "Image Chooser")
-            chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, intentArray)
-            startActivityForResult(chooserIntent, INPUT_FILE_REQUEST_CODE)
+            val hyhy5hyy5h69 = Intent(Intent.ACTION_GET_CONTENT)
+            hyhy5hyy5h69.addCategory(Intent.CATEGORY_OPENABLE)
+            hyhy5hyy5h69.type = "image/*"
+            val arrayOfIntents: Array<Intent?> =
+                gttggtgtfff5?.let { arrayOf(it) } ?: arrayOfNulls(0)
+            val jukiik5ik5 = Intent(Intent.ACTION_CHOOSER)
+            jukiik5ik5.putExtra(Intent.EXTRA_INTENT, hyhy5hyy5h69)
+            jukiik5ik5.putExtra(Intent.EXTRA_TITLE, "Image Chooser")
+            jukiik5ik5.putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOfIntents)
+            startActivityForResult(jukiik5ik5, gtjiogtjoiggtjjgt)
             return true
         }
 
-        fun createImageFile(): File? {
-            val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-            val imageFileName = "JPEG_" + timeStamp + "_"
-            val storageDir = Environment.getExternalStoragePublicDirectory(
+        fun gtjigthtghugtgthugt(): File? {
+            val gtuhgthgtgt = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+            val vfbfvbhgfrgygfrrf = "JPEG_" + gtuhgthgtgt + "_"
+            val yhlhylgtkfrjgdegedfsdtf = Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES
             )
             return File.createTempFile(
-                imageFileName,
+                vfbfvbhgfrgygfrrf,
                 ".jpg",
-                storageDir
+                yhlhylgtkfrjgdegedfsdtf
             )
         }
     }
 
-    private fun urururururururur(): String {
+    private fun nvfbfdedfedfsddrsdrsdds(): String {
 
-        val spoon = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
+        val gt5gt5gtgttg = getSharedPreferences("SP_WEBVIEW_PREFS", AppCompatActivity.MODE_PRIVATE)
 
 
-        val sharPre = getSharedPreferences(
+        val gtgt5gt5gt5 = getSharedPreferences(
             "SHARED_PREF",
             Context.MODE_PRIVATE
         )
 
-        val link = sharPre.getString("link", null)
-        val myTrId = sharPre.getString(MaiinnClaaaaasss.instId, null)
-        val afId = sharPre.getString(aps_id, null)
+        val linkaaaaa = gtgt5gt5gt5.getString("link", null)
+        val myTrIdaaaaaa = gtgt5gt5gt5.getString(MaiinnClaaaaasss.instIdfrfrf, null)
+        val afIdaaaaaaa = gtgt5gt5gt5.getString(aps_idddddd, null)
 
-        val interd = sharPre.getString("WebInt", null)
+        val interdaaaaaaaa = gtgt5gt5gt5.getString("WebInt", null)
 
 
-        when (interd) {
+        when (interdaaaaaaaa) {
             "campaign" -> {
-                viewBeamModel.pushToOS(afId.toString())
+                frokrfko.gtgtigtjijgtjgtgtigti(afIdaaaaaaa.toString())
             }
             "deepLink" -> {
-                viewBeamModel.pushToOS(afId.toString())
+                frokrfko.gtgtigtjijgtjgtgtigti(afIdaaaaaaa.toString())
             }
             "deepLinkNOApps" -> {
-                viewBeamModel.pushToOS(myTrId.toString())
+                frokrfko.gtgtigtjijgtjgtgtigti(myTrIdaaaaaa.toString())
             }
             "geo" -> {
-                viewBeamModel.pushToOS(myTrId.toString())
+                frokrfko.gtgtigtjijgtjgtgtigti(myTrIdaaaaaa.toString())
             }
 
         }
-        Log.d("lolo", "link is ${link}")
-        return spoon.getString("SAVED_URL", link).toString()
+        Log.d("lolo", "link is ${linkaaaaa}")
+        return gt5gt5gtgttg.getString("SAVED_URL", linkaaaaa).toString()
     }
 
     var urlfififif = ""
-    fun saveUrl(lurlurlurlurlur: String?) {
+    fun saveUrlaaaa(lurlurlurlurlur: String?) {
         if (!lurlurlurlurlur!!.contains("t.me")) {
 
             if (urlfififif == "") {
@@ -241,13 +243,13 @@ class BrovvvvsaaaaActivity : AppCompatActivity() {
     private var exitexitexitexit = false
     override fun onBackPressed() {
 
-        if (beam.canGoBack()) {
+        if (webViewfrrfrfrf.canGoBack()) {
             if (exitexitexitexit) {
-                beam.stopLoading()
-                beam.loadUrl(urlfififif)
+                webViewfrrfrfrf.stopLoading()
+                webViewfrrfrfrf.loadUrl(urlfififif)
             }
             this.exitexitexitexit = true
-            beam.goBack()
+            webViewfrrfrfrf.goBack()
             Handler(Looper.getMainLooper()).postDelayed(Runnable {
                 exitexitexitexit = false
             }, 2000)

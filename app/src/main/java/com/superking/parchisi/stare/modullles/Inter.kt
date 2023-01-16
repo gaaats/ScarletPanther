@@ -7,19 +7,19 @@ import retrofit2.http.GET
 
 interface ApiInterface {
     @GET("json/?key=KXgMIA7HSEcn0SV")
-    suspend fun getData(): Response<CountryCodeJS>
+    suspend fun getDataaaaaaa(): Response<CountryCodeJS>
 }
 
 interface HostInterface {
     @GET("file.json")
-    suspend fun getDataDev(): Response<GeoDev>
+    suspend fun getDataDevvvvvvvv(): Response<GeoDev>
 }
 
 class CountryRepo(private val countryApi: ApiInterface) {
-    suspend fun getDat() = countryApi.getData()
+    suspend fun getDattttttttt() = countryApi.getDataaaaaaa()
 }
 class DevRepo(private val devData: HostInterface) {
-    suspend fun getDataDev() = devData.getDataDev()
+    suspend fun getDataDevvvvvvvv() = devData.getDataDevvvvvvvv()
 }
 
 @Keep
@@ -32,9 +32,9 @@ data class CountryCodeJS(
 @Keep
 data class GeoDev(
     @SerializedName("geo")
-    val geo: String,
+    val geoooo: String,
     @SerializedName("view")
-    val view: String,
+    val viewvvv: String,
     @SerializedName("appsChecker")
-    val appsChecker: String,
+    val appsCheckerrrrr: String,
 )

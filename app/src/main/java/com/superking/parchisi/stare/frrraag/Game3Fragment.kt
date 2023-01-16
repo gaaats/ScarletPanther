@@ -15,10 +15,6 @@ import kotlinx.coroutines.delay
 
 class Game3Fragment : Fragment() {
 
-    private var fragmentGame3Binding: FragmentGame3Binding? = null
-    private val binding
-        get() = fragmentGame3Binding ?: throw RuntimeException("FragmentGame3Binding = null")
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         try {
             gtgtjoijtijogtjgjtjgt()
@@ -31,6 +27,10 @@ class Game3Fragment : Fragment() {
     }
 
     private fun gtgtjoijtijogtjgjtjgt() {
+        gkokkkgtkokgt()
+    }
+
+    private fun gkokkkgtkokgt() {
         lifecycleScope.launchWhenCreated {
             delay(2500)
             gtigtijtgiogtjjgtjgtji()
@@ -45,8 +45,16 @@ class Game3Fragment : Fragment() {
         return binding.root
     }
 
+    private var fragmentGame3Binding: FragmentGame3Binding? = null
+    private val binding
+        get() = fragmentGame3Binding ?: throw RuntimeException("FragmentGame3Binding = null")
+
 
     private fun gtigtijtgiogtjjgtjgtji() {
+        ojjjijgtijgtjtgjigtjjgtijigt()
+    }
+
+    private fun ojjjijgtijgtjtgjigtjjgtijigt() {
         findNavController().navigate(R.id.action_game3Fragment_to_game2Fragment)
     }
 
